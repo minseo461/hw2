@@ -1,0 +1,48 @@
+<style>
+body {
+ font-family: 'Times New Roman';
+ 
+ font-weight: bold;
+ font-size: 20px;
+ line-height: 30px;
+ color: #1000;
+ background-color: #FFC0CB;
+}
+.container {
+ max-width: 900px;
+ width: 100%;
+ margin: 5% auto;
+ padding: 2rem;
+ position: relative;
+ background-color: #FFFFFF;
+ box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+input[type="submit"] {
+ cursor: pointer;
+ width: 20%;
+ border: none;
+ background: #FEB697;
+ color: #FFF;
+ margin: 0 0 5px;
+ padding: 10px;
+ font-size: 15px;
+}
+input[type='text'], textarea {
+ width: 100%;
+ border: 1px solid #ccc;
+ background: #FFF;
+ margin: 0 0 5px;
+ padding: 10px;
+}
+
+    
+</style>
+
+
+<div class="container">
+    <%= form_for @post do |f| %>
+    NAME<%= f.text_field :title%> <br>
+    CONTENTS<%= f.text_field :content %> <br>
+    <%= f.submit '제출' %>
+<% end %>
+</div>
