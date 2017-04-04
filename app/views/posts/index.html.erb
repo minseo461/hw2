@@ -1,34 +1,34 @@
 <style>
-body {
- font-family: 'Times New Roman';
-
- font-weight: bold;
- font-size: 15px;
- line-height: 30px;
- color: #1000;
- background-color: #FFC0CB;
-}
-.container {
- max-width: 900px;
- width: 100%;
- margin: 5% auto;
- padding: 2.5rem;
- position: relative;
- background-color: #FFFFFF;
- box-shadow: 0 0 20px 0 rgba(0, 0, 0,1), 0 5px 5px 0 rgba(0, 0, 0, 1);
-}
-
+    body {
+     font-family: 'Times New Roman';
     
+     font-weight: bold;
+     font-size: 15px;
+     line-height: 30px;
+     color: #1000;
+     background-color: #FFC0CB;
+    }
+    .container {
+     max-width: 900px;
+     width: 100%;
+     margin: 5% auto;
+     padding: 2.5rem;
+     position: relative;
+     background-color: #FFFFFF;
+     box-shadow: 0 0 20px 0 rgba(0, 0, 0,1), 0 5px 5px 0 rgba(0, 0, 0, 1);
+    }
+
 </style>
 
-
-<div class="container">
-    <%= @posts.each do |p| %>
-        <div class="well">
-            <b><%= p.id%>번째 글</b> <br>
-            <hr>
-            <b>Name</b> : <%= p.title %> <br>
-            <b>CONTENTS</b></b> : <%= p.content %> <br>
-        </div>
-    <%end%>
-</div>
+<body>
+    <div class="container">
+        <% @posts.each do |p| %>
+            <div class="well">
+                <b><%= p.id%>번째 글</b> <br>
+                <hr>
+                <b>Name</b> : <%= p.title %> <br>
+                <b>CONTENTS</b> : <%= p.content %> <br>
+            </div>
+        <%end%>
+    </div>
+</body>
